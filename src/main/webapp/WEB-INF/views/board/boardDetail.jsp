@@ -37,8 +37,10 @@
 				
 			</div>
 			<c:if test="${ board.member_id eq sessionScope.member.member_id }">
-				<a href="boardUpdateView.bf?board_no=${ board.board_no }" class="btn btn-dark">수정</a>
-				<a href="boardDelete.bf?board_no=${ board.board_no }" class="btn btn-dark">삭제</a>
+				<div class="text-right" style="margin-top: 10px;">
+					<a href="boardUpdateView.bf?board_no=${ board.board_no }" class="btn btn-dark">수정</a>
+					<a href="boardDelete.bf?board_no=${ board.board_no }" class="btn btn-dark">삭제</a>
+				</div>
 			</c:if>
 		</div>
 	</div>

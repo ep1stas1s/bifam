@@ -23,7 +23,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 * @throws IOException 
@@ -31,7 +30,7 @@ public class HomeController {
 	@RequestMapping(value = "home.bf", method = RequestMethod.GET)
 	public String home(Locale locale, Model model, HttpServletRequest request, HttpServletResponse response) throws IOException{
 		// ip 출력
-		logger.info("client locale : {}, ip : {}.", locale, request.getRemoteAddr());
+		logger.debug("client locale : {}, ip : {}.", locale, request.getRemoteAddr());
 		
 		Date date = new Date();
 		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
